@@ -1,0 +1,54 @@
+@import libs/_reset
+@import base/_variables
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
+
+body
+    font-family: Roboto, sans-serif
+
+.head
+    min-height: 100vh
+    position: relative
+    display: grid
+    place-items: center
+    background-color: rgba(0, 0, 0, 0.5)
+.video-container
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    object-fit: cover
+    z-index: -1
+.video
+    &__title
+        font-size: 50px
+        font-weight: 700
+        color: #fff
+    &__btn
+        position: absolute
+        left: 30px
+        bottom: 30px
+        left: 140px
+        bottom: 60px
+        border-radius: 10px
+        padding: 10px 10px
+        font-size: 16px
+        color: var(--clr-primary-5)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 5px
+        text-transform: capitalize
+        outline: none
+        border: none
+        cursor: pointer
+        &-switch
+            position: absolute
+            border-radius: 10px
+            top: 0
+            left: 0
+            width: 50%
+            height: 100%
+            background-color: var(--clr-primary-5)
+            transition: all 0.5s ease-in-out
+.pause-video
+    left: 50%
