@@ -1,9 +1,8 @@
 //get elems
 
 const btnSwitch = document.querySelector('.video__btn-switch'),
-      btnControl = document.querySelector('.video__btn'),
-      video = document.querySelector('.video-container');
-
+    btnControl = document.querySelector('.video__btn'),
+    video = document.querySelector('.video-container');
 
 btnControl.addEventListener('click', (e) => {
     e.preventDefault();
@@ -16,4 +15,13 @@ btnControl.addEventListener('click', (e) => {
         video.pause();
         btnSwitch.classList.add('pause-video')
     }
+})
+
+//preloader
+//just use load event, so while we fully waiting for page to load, we show our preloader
+//once page loaded we hiding it
+const preloader = document.querySelector('.preloader');
+window.addEventListener('load', () => {
+    preloader.style.display = 'none';
+
 })
